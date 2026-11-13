@@ -1,0 +1,115 @@
+.delete-confirm {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(440px, calc(100vw - 32px));
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  color: #1f2937;
+  box-shadow: 0 24px 70px rgba(17, 24, 39, .24);
+}
+
+.delete-confirm::backdrop {
+  background: rgba(17, 24, 39, .56);
+  backdrop-filter: blur(3px);
+}
+
+.delete-confirm__content {
+  padding: 28px;
+  text-align: center;
+}
+
+.delete-confirm__title {
+  margin: 0;
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.delete-confirm__message {
+  margin: 12px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.delete-confirm__actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.delete-confirm__button {
+  min-width: 116px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.delete-confirm__button:active {
+  transform: translateY(1px);
+}
+
+.delete-confirm__button:focus-visible {
+  outline: 3px solid rgba(230, 0, 18, .28);
+  outline-offset: 2px;
+}
+
+.delete-confirm__cancel {
+  border-color: #d1d5db;
+  background: #fff;
+  color: #374151;
+}
+
+.delete-confirm__cancel:hover {
+  background: #f3f4f6;
+}
+
+.delete-confirm__accept {
+  background: #e60012;
+  color: #fff;
+}
+
+.delete-confirm__accept:hover {
+  background: #c90010;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delete-confirm__button {
+    transition: none;
+  }
+}
+
+body.dark .delete-confirm {
+  border-color: #374151;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark .delete-confirm__title {
+  color: #f9fafb;
+}
+
+body.dark .delete-confirm__message {
+  color: #d1d5db;
+}
+
+body.dark .delete-confirm__cancel {
+  border-color: #4b5563;
+  background: #374151;
+  color: #f9fafb;
+}
+
+body.dark .delete-confirm__cancel:hover {
+  background: #4b5563;
+}

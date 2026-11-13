@@ -1,0 +1,7 @@
+.git
+.env
+.env.*
+!.env.example
+**/node_modules
+admin/tailadmin-free-tailwind-dashboard-template-main
+*.log
